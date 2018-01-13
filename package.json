@@ -1,0 +1,31 @@
+{
+  "name": "monsite",
+  "version": "1.0.0",
+  "description": "My Website The aim is to show what I do as a developper :)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsacado/My-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fsacado/My-Website/issues"
+  },
+  "homepage": "https://github.com/fsacado/My-Website#readme",
+  "dependencies": {
+    "@symfony/webpack-encore": "^0.17.1"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6"
+  }
+}
