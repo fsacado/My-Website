@@ -11,8 +11,8 @@
         </div>
 
         <p>
-            <span>{{ identity.linkedin }}</span>
-            <span>{{ identity.github }}</span>
+            <a href="{{ identity.linkedin }}"><img src="{{ asset('uploads/identity/') ~ identity.linkedinImage }}"></a>
+            <a href="{{ identity.github }}"><img src="{{ asset('uploads/identity/') ~ identity.githubImage }}"></a>
         </p>
     </div>
 {% endblock %}
