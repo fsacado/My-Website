@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="identity-section">
+        <h1 class="main-title">{{ identity.title }}</h1>
+
+        <div>{{ identity.description }}</div>
+
+        <div class="image-content">
+            <img src="{{ asset('uploads/identity/') ~ identity.image }}">
+        </div>
+
+        <p>
+            <span>{{ identity.linkedin }}</span>
+            <span>{{ identity.github }}</span>
+        </p>
+    </div>
+{% endblock %}

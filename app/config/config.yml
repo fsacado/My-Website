@@ -67,3 +67,17 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+# VichUpload Configuration
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        upload_identity:
+            uri_prefix: /identity
+            upload_destination: '%kernel.project_dir%/web/uploads/identity'
+
+            namer: vich_uploader.namer_uniqid
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
