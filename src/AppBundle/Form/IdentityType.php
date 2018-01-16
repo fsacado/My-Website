@@ -18,7 +18,9 @@ class IdentityType extends AbstractType
                 ->add('description')
                 ->add('imageFile', FileType::class, array('required' => false))
                 ->add('linkedin')
-                ->add('github');
+                ->add('linkedinImageFile', FileType::class, array('required' => false))
+                ->add('github')
+                ->add('githubImageFile', FileType::class, array('required' => false));
     }/**
      * {@inheritdoc}
      */

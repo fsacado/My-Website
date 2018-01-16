@@ -27,7 +27,7 @@ class IdentityController extends Controller
 
         $identity = $em->getRepository('AppBundle:Identity')->findOneById(1);
 
-        return $this->render('identity/index.html.twig', array(
+        return $this->render('identity/show.html.twig', array(
             'identity' => $identity,
         ));
     }

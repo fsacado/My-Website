@@ -6,13 +6,17 @@
 
         <div>{{ identity.description }}</div>
 
-        <div class="image-content">
-            <img src="{{ asset('uploads/identity/') ~ identity.image }}">
+        <div class="image-content-center">
+            <img src="{{ asset('uploads/identity/') ~ identity.image }}" alt="Presentation image">
         </div>
 
-        <p>
-            <span>{{ identity.linkedin }}</span>
-            <span>{{ identity.github }}</span>
+        <p class="center">
+            <a href="{{ identity.linkedin }}" target="_blank"><img
+                        src="{{ asset('uploads/identity/') ~ identity.linkedinImage }}" alt="Linkedin icon"></a>
+            <a href="{{ identity.github }}" target="_blank"><img
+                        src="{{ asset('uploads/identity/') ~ identity.githubImage }}" alt="Github icon"></a>
         </p>
+
+        <hr style="border:solid 2px black">
     </div>
 {% endblock %}
