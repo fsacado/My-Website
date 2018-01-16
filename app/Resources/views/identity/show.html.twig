@@ -1,48 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Identity</h1>
+    <div class="container">
+        <div class="identity-section">
+            <h1 class="main-title">{{ identity.title }}</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ identity.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ identity.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ identity.description }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ identity.image }}</td>
-            </tr>
-            <tr>
-                <th>Linkedin</th>
-                <td>{{ identity.linkedin }}</td>
-            </tr>
-            <tr>
-                <th>Github</th>
-                <td>{{ identity.github }}</td>
-            </tr>
-        </tbody>
-    </table>
+            <div>{{ identity.description }}</div>
 
-    <ul>
-        <li>
-            <a href="{{ path('identity_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('identity_edit', { 'id': identity.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            <div class="image-content">
+                <img src="{{ asset('uploads/identity/') ~ identity.image }}" alt="Presentation image">
+            </div>
+
+            <p>
+                <a href="{{ identity.linkedin }}" target="_blank"><img src="{{ asset('uploads/identity/') ~ identity.linkedinImage }}"
+                                                       alt="Linkedin icon"></a>
+                <a href="{{ identity.github }}" target="_blank"><img src="{{ asset('uploads/identity/') ~ identity.githubImage }}"
+                                                     alt="Github icon"></a>
+            </p>
+        </div>
+
+        <ul>
+            <li>
+                <a href="{{ path('identity_index') }}">Back to the list</a>
+            </li>
+            <li>
+                <a href="{{ path('identity_edit', { 'id': identity.id }) }}">Edit</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
