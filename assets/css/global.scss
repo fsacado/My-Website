@@ -1,17 +1,27 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+/* GENERAL */
+
+.center {
+  text-align: center;
+}
+
+/* IDENTITY ------------------------------------------------------------------------------------------------------------*/
+
 .identity-section {
-  .main-title {
-    text-align: center;
-  }
-  .image-content-center {
-    text-align: center;
+  .presentation-image {
     img {
       height: 150px;
       width: 150px;
     }
   }
-  .center {
-    text-align: center;
+  .collapse {
+    .nav {
+      float: none;
+      display: inline-block;
+      a {
+        color: black;
+      }
+    }
   }
 }
