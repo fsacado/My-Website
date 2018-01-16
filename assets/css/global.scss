@@ -4,7 +4,14 @@
   .main-title {
     text-align: center;
   }
-  .image-content {
+  .image-content-center {
+    text-align: center;
+    img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+  .center {
     text-align: center;
   }
 }
