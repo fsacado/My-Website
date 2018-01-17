@@ -17,6 +17,9 @@ Encore
     // will output as web/build/global.css
     .addStyleEntry('global', './assets/css/global.scss')
 
+    // will output as web/build/admin.css
+    .addStyleEntry('admin', './assets/css/admin.scss')
+
     // allow sass/scss files to be processed
     .enableSassLoader()
 

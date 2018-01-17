@@ -1,17 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
     <div class="container">
         <div class="identity-section">
-            <h1 class="main-title">{{ identity.title }}</h1>
+            <h1 class="center">{{ identity.title }}</h1>
 
             <div>{{ identity.description }}</div>
 
-            <div class="image-content">
+            <div class="presentation-image center">
                 <img src="{{ asset('uploads/identity/') ~ identity.image }}" alt="Presentation image">
             </div>
 
-            <p>
+            <p class="center">
                 <a href="{{ identity.linkedin }}" target="_blank"><img src="{{ asset('uploads/identity/') ~ identity.linkedinImage }}"
                                                        alt="Linkedin icon"></a>
                 <a href="{{ identity.github }}" target="_blank"><img src="{{ asset('uploads/identity/') ~ identity.githubImage }}"

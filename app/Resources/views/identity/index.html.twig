@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="identity-section">
+    <div class="identity-section section">
         <h1 class="center">{{ identity.title }}</h1>
 
         <div>{{ identity.description }}</div>
@@ -17,9 +17,9 @@
                         src="{{ asset('uploads/identity/') ~ identity.githubImage }}" alt="Github icon"></a>
         </p>
 
-        <hr style="border:solid 2px black">
+        <hr>
 
-        <nav class="navbar" role="navigation">
+        <nav class="navbar navbar-static-bottom" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
