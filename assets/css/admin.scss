@@ -2,10 +2,6 @@
 
 /* GENERAL */
 
-.section {
-  height: 100vh;
-}
-
 .center {
   text-align: center;
 }
@@ -17,18 +13,6 @@
     img {
       height: 150px;
       width: 150px;
-    }
-  }
-  hr {
-    border: solid 2px black;
-  }
-  .collapse {
-    .nav {
-      float: none;
-      display: inline-block;
-      a {
-        color: black;
-      }
     }
   }
 }

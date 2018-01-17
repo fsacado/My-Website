@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="identity-section">
-        <h1 class="main-title">{{ identity.title }}</h1>
+    <div class="identity-section section">
+        <h1 class="center">{{ identity.title }}</h1>
 
         <div>{{ identity.description }}</div>
 
-        <div class="image-content-center">
+        <div class="presentation-image center">
             <img src="{{ asset('uploads/identity/') ~ identity.image }}" alt="Presentation image">
         </div>
 
@@ -17,6 +17,26 @@
                         src="{{ asset('uploads/identity/') ~ identity.githubImage }}" alt="Github icon"></a>
         </p>
 
-        <hr style="border:solid 2px black">
+        <hr>
+
+        <nav class="navbar navbar-static-bottom" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse center" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
 {% endblock %}
