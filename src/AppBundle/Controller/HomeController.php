@@ -16,9 +16,11 @@ class HomeController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $identity = $em->getRepository('AppBundle:Identity')->findOneById(1);
+        $projects = $em->getRepository('AppBundle:Project')->findAll();
 
         return $this->render('home/index.html.twig', array(
             'identity' => $identity,
+            'projects' => $projects,
         ));
     }
 }
