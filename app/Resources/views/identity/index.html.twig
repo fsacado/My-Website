@@ -1,7 +1,28 @@
-{% extends 'base.html.twig' %}
+<div class="identity-section section container">
 
-{% block body %}
-    <div class="identity-section section">
+    <div class="identity-hr-navbar hidden-lg hidden-md">
+        <nav class="navbar navbar-fixed-top burger" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse center" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="identity-top">
         <h1 class="center">{{ identity.title }}</h1>
 
         <div>{{ identity.description }}</div>
@@ -16,19 +37,12 @@
             <a href="{{ identity.github }}" target="_blank"><img
                         src="{{ asset('uploads/identity/') ~ identity.githubImage }}" alt="Github icon"></a>
         </p>
+    </div>
 
+    <div class="identity-hr-navbar hidden-sm hidden-xs">
         <hr>
 
-        <nav class="navbar navbar-static-bottom" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+        <nav class="navbar" role="navigation">
             <div class="collapse navbar-collapse center" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -39,4 +53,6 @@
             </div>
         </nav>
     </div>
-{% endblock %}
+</div>
+
+
