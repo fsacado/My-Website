@@ -1,11 +1,13 @@
 require('bootstrap-sass');
+require('jquery-scrollify');
+let $ = require('jquery');
 
-$(function() {
-    $.scrollify({
-       section: ".section"
+if ("ontouchstart" in document.documentElement) {
+    $.scrollify.disable();
+} else {
+    $(function () {
+        $.scrollify({
+            section: ".section"
+        });
     });
-});
-
-$("#identity").click(function() {
-   $.scrollify.move("#project1");
-});
+}
