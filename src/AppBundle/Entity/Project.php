@@ -58,6 +58,12 @@ class Project
     private $updatedAt;
 
     /**
+     * @ORM\Column(type="string")
+     * @var string
+     */
+    private $url;
+
+    /**
      * Get id
      *
      * @return int
@@ -181,6 +187,25 @@ class Project
     {
         return $this->updatedAt;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param mixed $url
+     * @return Project
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+        return $this;
+    }
+
 
 
 }

@@ -2,6 +2,14 @@
 
 /* GENERAL */
 
+h1, h2, nav {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+}
+
 .section {
   min-height: 100vh;
 }
@@ -10,10 +18,10 @@
   text-align: center;
 }
 
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
+//.container-fluid {
+//  padding-left: 0;
+//  padding-right: 0;
+//}
 
 .row {
   margin-left: 0;
@@ -48,8 +56,8 @@
     margin-top: calc(1vh + 4vw);
     a {
       img {
-        max-height: 7vh;
-        max-width: 7vh;
+        max-height: 5vh;
+        max-width: 5vh;
         margin: 15px;
       }
     }
@@ -64,22 +72,21 @@
     }
     .navbar {
       background-color: #5bc0de;
+      height: 40px;
       .collapse {
         .nav {
           float: none;
           display: inline-block;
-          a {
-            color: black;
+          li {
+            padding-left: 10px;
+            padding-right: 10px;
+            a {
+              color: black;
+            }
           }
         }
       }
     }
-    //.affix {
-    //  position: fixed;
-    //  top: 0;
-    //  width: 100%;
-    //  z-index: 10;
-    //}
   }
 }
 
@@ -99,22 +106,7 @@
       margin-bottom: 2vh;
     }
   }
-  .navbar-and-projects {
-    height: 20vh;
-    .identity-hr-navbar {
-      margin-top: 2vh;
-      .navbar {
-        background-color: #5bc0de;
-        .collapse {
-          .nav {
-            float: none;
-            display: inline-block;
-            a {
-              color: black;
-            }
-          }
-        }
-      }
-    }
+  .div-button {
+    margin-top: 5vh;
   }
 }

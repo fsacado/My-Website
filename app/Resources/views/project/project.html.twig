@@ -1,23 +1,6 @@
-{% for project in projects %}
-    <div class="project-section section container">
-
-        {#<div class="navbar-and-projects">#}
-            {#<div class="identity-hr-navbar hidden-sm hidden-xs">#}
-                {#<nav class="navbar" role="navigation">#}
-                    {#<div class="collapse navbar-collapse center">#}
-                        {#<ul class="nav navbar-nav">#}
-                            {#<li class="active"><a href="#">Home</a></li>#}
-                            {#<li><a href="#">Projects</a></li>#}
-                            {#<li><a href="#">Contact</a></li>#}
-                            {#<li><a href="#">Other</a></li>#}
-                        {#</ul>#}
-                    {#</div>#}
-                {#</nav>#}
-            {#</div>#}
+{#{% for project in projects %}#}
+    <div class="project-section container">
             <h1 class="center">My projects</h1>
-        {#bin#}
-
-
         <div class="row">
 
             <div class="col-sm-6 center">
@@ -29,8 +12,8 @@
                 <p>{{ project.description }}</p>
             </div>
         </div>
-
-
+        <div class="center div-button">
+            <a class="btn btn-primary" href="{{ project.url }}" target="_blank">Visit it</a>
+        </div>
     </div>
-
-{% endfor %}
+{#{% endfor %}#}

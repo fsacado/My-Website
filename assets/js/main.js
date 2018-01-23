@@ -1,7 +1,11 @@
 require('bootstrap-sass');
 
-// $('#nav').affix({
-//     offset: {
-//         top: $('.identity-top').height()
-//     }
-// });
+$(function() {
+    $.scrollify({
+       section: ".section"
+    });
+});
+
+$("#identity").click(function() {
+   $.scrollify.move("#project1");
+});

@@ -16,7 +16,8 @@ class ProjectType extends AbstractType
     {
         $builder->add('name')
                 ->add('description')
-                ->add('imageFile', FileType::class, array('required' => false));
+                ->add('imageFile', FileType::class, array('required' => false))
+                ->add('url');
     }/**
      * {@inheritdoc}
      */
