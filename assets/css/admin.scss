@@ -6,13 +6,70 @@
   text-align: center;
 }
 
-/* IDENTITY ------------------------------------------------------------------------------------------------------------*/
+/* HOME ----------------------------------------------------------------------------------------------------------------*/
 
-.identity-section {
-  .presentation-image {
-    img {
-      height: 150px;
-      width: 150px;
+.home {
+  h1 {
+    margin-top: 15vh;
+  }
+  .row {
+    margin-top: 10vh;
+    p {
+      margin-top: 5vh;
     }
+    img {
+      max-height: 30vh;
+      max-width: 30vh;
+    }
+  }
+}
+
+/* IDENTITY SHOW--------------------------------------------------------------------------------------------------------*/
+
+.identity-section-show {
+  h1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .presentation-image {
+    min-height: 5vh;
+    img {
+      margin-top: calc(3vh + 3vw);
+      margin-bottom: 2vh;
+      max-height: 30vh;
+      max-width: 30vh;
+    }
+  }
+  .networks {
+    margin-top: calc(1vh + 4vw);
+    a {
+      img {
+        max-height: 5vh;
+        max-width: 5vh;
+        margin: 15px;
+      }
+    }
+  }
+  .buttons {
+    margin-top: 10vh;
+  }
+}
+
+/* IDENTITY EDIT--------------------------------------------------------------------------------------------------------*/
+
+.identity-section-edit {
+  margin-top: 10vh;
+  width: 60vw;
+  border: 1px solid grey;
+  padding: 2em;
+  input[type="file"] {
+    display: inline;
+  }
+  .length {
+    width: 100%;
+    margin-bottom: 1vh;
+  }
+  .edit-button {
+    margin-top: 1vh;
   }
 }
