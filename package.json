@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/fsacado/My-Website#readme",
   "dependencies": {
-    "@symfony/webpack-encore": "^0.17.1"
+    "@symfony/webpack-encore": "^0.17.1",
+    "jquery-scrollify": "^1.0.19"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
