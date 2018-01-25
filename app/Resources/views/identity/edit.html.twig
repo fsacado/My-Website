@@ -1,21 +1,19 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Identity edit</h1>
+    <div class="container">
+        <div class="identity-section-edit">
+            <h1 class="center">Identité</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+            {{ form_start(edit_form) }}
+            {{ form_widget(edit_form) }}
+            <input type="submit" class="btn btn-info edit-button" value="Confirmer"/>
+            {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('identity_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            <p class="edit-button">
+                <a class="btn btn-success" href="{{ path('identity_index') }}">Retour</a>
+            </p>
+        </div>
+    </div>
+
 {% endblock %}

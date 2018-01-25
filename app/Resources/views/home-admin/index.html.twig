@@ -1,0 +1,23 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+
+    <div class="container home">
+        <h1 class="center">Administration</h1>
+
+        <div class="row">
+
+            <div class="col-sm-6 center">
+                <a href="{{ path('identity_index') }}"><img src="{{ asset('images/identity.png') }}"></a>
+                <p class="center">Identité</p>
+            </div>
+
+            <div class="col-sm-6 center">
+                <a href="{{ path('project_index') }}"><img src="{{ asset('images/projects.png') }}"></a>
+                <p class="center">Projets</p>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
