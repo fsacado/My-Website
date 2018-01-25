@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="container">
-        <div class="identity-section">
+        <div class="identity-section-show">
             <h1 class="center">{{ identity.title }}</h1>
 
             <div>{{ identity.description }}</div>
@@ -11,21 +11,18 @@
                 <img src="{{ asset('uploads/identity/') ~ identity.image }}" alt="Presentation image">
             </div>
 
-            <p class="center">
-                <a href="{{ identity.linkedin }}" target="_blank"><img src="{{ asset('uploads/identity/') ~ identity.linkedinImage }}"
-                                                       alt="Linkedin icon"></a>
-                <a href="{{ identity.github }}" target="_blank"><img src="{{ asset('uploads/identity/') ~ identity.githubImage }}"
-                                                     alt="Github icon"></a>
+            <p class="center networks">
+                <a href="{{ identity.linkedin }}" target="_blank"><img
+                            src="{{ asset('uploads/identity/') ~ identity.linkedinImage }}"
+                            alt="Linkedin icon"></a>
+                <a href="{{ identity.github }}" target="_blank"><img
+                            src="{{ asset('uploads/identity/') ~ identity.githubImage }}"
+                            alt="Github icon"></a>
+            </p>
+            <p class="center buttons">
+                <a class="btn btn-info" href="{{ path('identity_edit', { 'id': identity.id }) }}">Modifier</a>
+                <a class="btn btn-success" href="{{ path('home_admin') }}">Retour</a>
             </p>
         </div>
-
-        <ul>
-            <li>
-                <a href="{{ path('identity_index') }}">Back to the list</a>
-            </li>
-            <li>
-                <a href="{{ path('identity_edit', { 'id': identity.id }) }}">Edit</a>
-            </li>
-        </ul>
     </div>
 {% endblock %}

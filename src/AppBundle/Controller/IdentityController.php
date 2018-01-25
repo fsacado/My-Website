@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Identity controller.
  *
- * @Route("identity")
+ * @Route("admin/identity")
  */
 class IdentityController extends Controller
 {
