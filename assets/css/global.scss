@@ -18,11 +18,6 @@ p, h2 {
   text-align: center;
 }
 
-//.container-fluid {
-//  padding-left: 0;
-//  padding-right: 0;
-//}
-
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -30,60 +25,75 @@ p, h2 {
 
 /* IDENTITY ------------------------------------------------------------------------------------------------------------*/
 
-.identity-section {
-  .identity-top {
-    min-height: 85vh;
-  }
-  h1 {
-    margin-top: 15vh;
-    margin-bottom: 5vh;
-  }
-  @media (max-width: 1000px) {
+.identity-background {
+  background-color: grey;
+  .identity-section {
+    .identity-top {
+      min-height: 85vh;
+    }
     h1 {
-      margin-top: 8vh;
+      margin-top: 15vh;
+      margin-bottom: 5vh;
     }
-  }
-  .presentation-image {
-    min-height: 5vh;
-    img {
-      margin-top: calc(3vh + 3vw);
-      margin-bottom: calc(1vh + 3vw);
-      max-height: 30vh;
-      max-width: 30vh;
-    }
-  }
-  p {
-    margin-top: calc(1vh + 4vw);
-    a {
-      img {
-        max-height: 5vh;
-        max-width: 5vh;
-        margin: 15px;
+    @media (max-width: 1000px) {
+      h1 {
+        margin-top: 8vh;
       }
     }
-  }
-  .identity-hr-navbar {
-    margin-bottom: 70px;
-    hr {
-      border: solid 2px black;
+    .presentation-image {
+      min-height: 5vh;
+      img {
+        margin-top: calc(3vh + 3vw);
+        margin-bottom: calc(1vh + 3vw);
+        max-height: 30vh;
+        max-width: 30vh;
+      }
     }
-    button span {
-      border: solid 1px black;
+    p {
+      margin-top: calc(1vh + 4vw);
+      a {
+        img {
+          max-height: 5vh;
+          max-width: 5vh;
+          margin: 15px;
+        }
+      }
     }
-    .navbar {
-      background-color: #5bc0de;
-      height: 40px;
-      .collapse {
-        background-color: #5bc0de;
-        .nav {
-          float: none;
-          display: inline-block;
-          li {
-            padding-left: 10px;
-            padding-right: 10px;
-            a {
-              color: black;
+    .identity-hr-navbar {
+      margin-bottom: 70px;
+      hr {
+        border: solid 2px black;
+      }
+      button span {
+        border: solid 1px black;
+      }
+      .navbar {
+        height: 40px;
+        .collapse {
+          background-color: grey;
+          -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+          -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+          transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+          .nav {
+            float: none;
+            display: inline-block;
+            li {
+              padding-left: 10px;
+              padding-right: 10px;
+              a {
+                color: white;
+              }
             }
+          }
+        }
+      }
+      @media (min-width: 992px) {
+        .navbar.navbar-shrink {
+          .collapse {
+            background-color: black;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
           }
         }
       }
@@ -93,21 +103,24 @@ p, h2 {
 
 /* PROJECTS ------------------------------------------------------------------------------------------------------------*/
 
-.project-section {
-  h1 {
-    margin-top: 15vh;
-  }
-  .row {
-    margin-top: 20vh;
-    img {
-      max-height: 30vh;
-      max-width: 50vh;
+.project-background {
+  background-color: black;
+  .project-section {
+    h1 {
+      margin-top: 15vh;
     }
-    h2 {
-      margin-bottom: 4vh;
+    .row {
+      margin-top: 20vh;
+      img {
+        max-height: 30vh;
+        max-width: 50vh;
+      }
+      h2 {
+        margin-bottom: 4vh;
+      }
     }
-  }
-  .div-button {
-    margin-top: 5vh;
+    .div-button {
+      margin-top: 5vh;
+    }
   }
 }
