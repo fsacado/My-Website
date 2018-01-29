@@ -1,5 +1,5 @@
 <div class="identity-background">
-    <div class="identity-section container">
+    <div class="identity-section container" id="identity">
 
         <div class="identity-hr-navbar">
             <nav class="navbar navbar-fixed-top burger" role="navigation">
@@ -14,8 +14,8 @@
                 </div>
                 <div class="collapse navbar-collapse center" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="#identity">Home</a></li>
+                        <li><a href="#project1">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Other</a></li>
                     </ul>
@@ -23,13 +23,13 @@
             </nav>
         </div>
 
-        <div class="identity-top">
+        <div class="identity">
             <h1 class="center">{{ identity.title }}</h1>
 
-            <div><p>{{ identity.description }}</p></div>
+            <div><p class="center">{{ identity.description | nl2br }}</p></div>
 
             <div class="presentation-image center">
-                <img src="{{ asset('uploads/identity/') ~ identity.image }}" alt="Presentation image">
+                <img class="img-circle" src="{{ asset('uploads/identity/') ~ identity.image }}" alt="Presentation image">
             </div>
 
             <p class="center">

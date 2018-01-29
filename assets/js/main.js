@@ -22,3 +22,8 @@ let navbarCollapse = function() {
 
 navbarCollapse();
 $(window).scroll(navbarCollapse);
+
+// $(".nav a").on("click", function(){
+//     $(".nav").find(".active").removeClass("active");
+//     $(this).parent().addClass("active");
+// });
