@@ -110,6 +110,8 @@ easy_admin:
                     - "title"
                     - "description"
                     - { property: "image", type: "image", base_path: "/uploads/identity/" }
+                    - { property: "linkedinImage", type: "image", base_path: "/uploads/identity/" }
+                    - { property: "githubImage", type: "image", base_path: "/uploads/identity/" }
             form:
                 fields:
                     - 'title'
