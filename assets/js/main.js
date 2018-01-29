@@ -11,3 +11,14 @@ if ("ontouchstart" in document.documentElement) {
         });
     });
 }
+
+let navbarCollapse = function() {
+    if ($(".navbar").offset().top > 100) {
+        $(".navbar").addClass("navbar-shrink");
+    } else {
+        $(".navbar").removeClass("navbar-shrink");
+    }
+};
+
+navbarCollapse();
+$(window).scroll(navbarCollapse);
