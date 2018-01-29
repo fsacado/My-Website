@@ -22,7 +22,8 @@ class IdentityType extends AbstractType
                 ->add('linkedinImageFile', FileType::class, array('required' => false, 'label' => 'Image Linkedin', 'attr' => array('class' => 'length')))
                 ->add('github', TextType::class, array('label' => 'Github', 'attr' => array('class' => 'length')))
                 ->add('githubImageFile', FileType::class, array('required' => false, 'label' => 'Image Github', 'attr' => array('class' => 'length')));
-    }/**
+    }
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

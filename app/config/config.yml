@@ -99,3 +99,43 @@ fos_user:
      from_email:
           address: "%mailer_user%"
           sender_name: "%mailer_user%"
+
+#EasyAdmin
+easy_admin:
+    entities:
+        Identity:
+            class: AppBundle\Entity\Identity
+            list:
+                fields:
+                    - "title"
+                    - "description"
+                    - { property: "image", type: "image", base_path: "/uploads/identity/" }
+                    - { property: "linkedinImage", type: "image", base_path: "/uploads/identity/" }
+                    - { property: "githubImage", type: "image", base_path: "/uploads/identity/" }
+            form:
+                fields:
+                    - 'title'
+                    - 'description'
+                    - { property: "imageFile", type: "file" }
+                    - 'linkedin'
+                    - { property: "linkedinImageFile", type: "file" }
+                    - 'github'
+                    - { property: "githubImageFile", type: "file" }
+        Project:
+            class: AppBundle\Entity\Project
+            list:
+                fields:
+                    - "name"
+                    - "description"
+                    - "url"
+                    - { property: "image", type: "image", base_path: "/uploads/project/" }
+            form:
+                fields:
+                    - 'name'
+                    - 'description'
+                    - { property: "imageFile", type: "file" }
+                    - 'url'
+        User:
+            class: AppBundle\Entity\User
+    design:
+        brand_color: 'orange'
