@@ -3,10 +3,10 @@
         <h1 class="center">Project {{ project.id }}</h1>
         <div class="row">
 
-            <div class="col-md-4 center hidden-xs hidden-sm">
+            <div class="col-md-4 center hidden-xs hidden-sm image-div">
                 <img src="{{ asset('uploads/project/') ~ project.image }}" class="image" data-toggle="modal" data-target="#myModal{{ project.id }}">
             </div>
-            <div class="col-md-4 center hidden-md hidden-lg">
+            <div class="col-md-4 center hidden-md hidden-lg image-div">
                 <img src="{{ asset('uploads/project/') ~ project.image }}" class="image">
             </div>
 
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="center div-button">
-            <a class="btn btn-primary" href="{{ project.url }}" target="_blank">Visit it</a>
+            <a class="btn button-project" href="{{ project.url }}" target="_blank">Visit it</a>
         </div>
     </div>
 </div>

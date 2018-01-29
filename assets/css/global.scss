@@ -5,14 +5,16 @@
 $font-size-h1: calc(4vh + 5px);
 $font-size-h2: calc(3vh + 5px);
 $font-size-p: calc(2vh + 5px);
+$font-julius-sans-one: 'Julius Sans One', sans-serif;
+$font-lato: 'Lato', sans-serif;
 
 h1, nav {
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: $font-julius-sans-one;
   font-size: $font-size-h1;
 }
 
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: $font-lato;
   font-size: $font-size-p;
 }
 
@@ -132,28 +134,53 @@ h2 {
     }
     .row {
       margin-top: 10vh;
-      .image {
-        max-height: 30vh;
-        max-width: 50vh;
-        @media (min-width: 996px) {
-          cursor: pointer;
+      .image-div {
+        overflow: hidden;
+        .image {
+          max-height: 38vh;
+          max-width: 38vh;
+          transition: 0.4s;
+          @media (min-width: 996px) {
+            cursor: pointer;
+          }
         }
       }
+      .image-div:hover .image {
+        transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+
+      }
       h2 {
-        margin-bottom: 4vh;
+        margin-bottom: 3vh;
+        margin-top: 1vh;
       }
     }
     .modal {
       .modal-dialog {
         margin: 10vh auto;
-        img {
-          max-height: inherit;
-          width: 30vw;
+        .modal-body {
+          padding: 10px;
+          img {
+            max-height: inherit;
+            width: 30vw;
+          }
         }
       }
     }
     .div-button {
       margin-top: 5vh;
     }
+  }
+  .button-project {
+    color: white;
+    font-size: $font-size-p;
+    font-family: $font-julius-sans-one;
+    border: solid 2px white;
+    border-radius: 1px;
+  }
+  .button-project:hover {
+    color: red;
+    border: solid 2px red;
   }
 }
