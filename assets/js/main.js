@@ -12,6 +12,22 @@ if ("ontouchstart" in document.documentElement) {
     });
 }
 
+// $(".nav a").on("click", function(e){
+//     $.scrollify("move", $(this).find("href").find("id"));
+// });
+// $('body').scrollspy({target: ".navbar"});
+// $(".nav a").on("click", function(){
+//    if (this.hash !== "") {
+//        event.preventDefault();
+//        let hash = this.hash;
+//        $('html, body').animate({
+//            scrollTop: $(hash).offset().top
+//        }, 800, function() {
+//            window.location.hash = hash;
+//        });
+//    }
+// });
+
 let navbarCollapse = function() {
     if ($(".navbar").offset().top > 100) {
         $(".navbar").addClass("navbar-shrink");
@@ -20,10 +36,6 @@ let navbarCollapse = function() {
     }
 };
 
-navbarCollapse();
+// navbarCollapse();
 $(window).scroll(navbarCollapse);
 
-// $(".nav a").on("click", function(){
-//     $(".nav").find(".active").removeClass("active");
-//     $(this).parent().addClass("active");
-// });
