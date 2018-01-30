@@ -7,10 +7,11 @@ $font-size-h2: calc(3vh + 5px);
 $font-size-p: calc(2vh + 5px);
 $font-julius-sans-one: 'Julius Sans One', sans-serif;
 $font-lato: 'Lato', sans-serif;
-$color1 : #18121E;
-$color2: #233237;
-$color3: #984B43;
-$color4: #EACA7A;
+$color1 : #026670;
+$color2: #9FEDD7;
+$color3: #FEF9C7;
+$color4: #FCE181;
+$color5: #EDEAE5;
 
 h1, nav {
   font-family: $font-julius-sans-one;
@@ -21,7 +22,7 @@ h1, nav {
 p {
   font-family: $font-lato;
   font-size: $font-size-p;
-  color: $color3;
+  color: $color1;
 }
 
 h2 {
@@ -49,7 +50,12 @@ h2 {
 /* IDENTITY ------------------------------------------------------------------------------------------------------------*/
 
 .identity-background {
-  background-color: $color4;
+  //background: url(".web/images/winter-landscape-2571788_1920.jpg") center no-repeat;
+  //background-color: $color2;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   min-height: 100vh;
   .identity-section {
     h1 {
@@ -91,10 +97,10 @@ h2 {
       .navbar {
         height: 40px;
         .navbar-header {
-          background-color: $color1;
+          background-color: $color4;
         }
         .collapse {
-          background-color: $color4;
+          //background-color: $color1;
           -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
           -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
           transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
@@ -105,7 +111,7 @@ h2 {
               padding-left: 10px;
               padding-right: 10px;
               a {
-                color: $color3;
+                color: $color4;
                 font-size: calc(2vh + 3px);
               }
               a:hover {
