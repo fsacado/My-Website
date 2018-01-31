@@ -18,9 +18,41 @@ class HomeController extends Controller
         $identity = $em->getRepository('AppBundle:Identity')->findOneById(1);
         $projects = $em->getRepository('AppBundle:Project')->findAll();
 
+
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Hello Email')
+                ->setFrom('loann.meignant@hotmail.fr')
+                ->setTo(['loann.meignant@hotmail.fr'])
+                ->setBody(
+                    $this->renderView(
+                        'email/layout.html.twig'),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+
+
         return $this->render('home/index.html.twig', array(
             'identity' => $identity,
             'projects' => $projects,
         ));
     }
+
+
+//    public function formAction($name)
+//    {
+//        $message = \Swift_Message::newInstance()
+//            ->setSubject('Hello Email')
+//            ->setFrom('send@example.com')
+//            ->setTo('loann.meignant@hotmail.fr')
+//            ->setBody(
+//                $this->renderView(
+//                    'email/layout.html.twig',
+//                    array('name' => $name)
+//                ),
+//                'text/html'
+//            );
+//        $this->get('mailer')->send($message);
+//
+//        return $this->render('home/index.html.twig');
+//    }
 }
