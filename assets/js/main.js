@@ -8,6 +8,7 @@ $(document).ready(function () {
         $.scrollify.disable();
         $('.home').prop("href", '#identity');
         $('.projects').prop("href", '#project1');
+        $('.contact').prop("href", '#contact');
     } else {
         $(function () {
             $('a').css("cursor", "pointer");
@@ -20,6 +21,10 @@ $(document).ready(function () {
 
             $('.projects').click(function () {
                 $.scrollify.move("#project1");
+            });
+
+            $('.contact').click(function () {
+                $.scrollify.move("#contact");
             });
         });
     }
