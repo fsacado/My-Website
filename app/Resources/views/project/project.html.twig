@@ -1,19 +1,37 @@
 <div class="project-background">
-    <div class="project-section container">
-        <h1 class="center hidden-sm hidden-xs">My projects</h1>
+    <div class="project-section container" id="project1">
+        <h1 class="center">Project {{ project.id }}</h1>
         <div class="row">
 
-            <div class="col-sm-6 center">
-                <img src="{{ asset('uploads/project/') ~ project.image }}">
+            <div class="col-md-4 center hidden-xs hidden-sm image-div">
+                <img src="{{ asset('uploads/project/') ~ project.image }}" class="image" data-toggle="modal" data-target="#myModal{{ project.id }}">
+            </div>
+            <div class="col-md-4 center hidden-md hidden-lg image-div">
+                <img src="{{ asset('uploads/project/') ~ project.image }}" class="image">
             </div>
 
-            <div class="col-sm-6">
+            {#MODAL#}
+            <div id="myModal{{ project.id }}" class="modal center"  role="dialog">
+                <div class="modal-dialog modal-afterpurchase">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="{{ asset('uploads/project/') ~ project.image }}">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {#END MODAL#}
+
+            <div class="col-md-8">
                 <h2 class="center">{{ project.name }}</h2>
-                <p>{{ project.description }}</p>
+                <p class="center">{{ project.description }}</p>
             </div>
         </div>
         <div class="center div-button">
-            <a class="btn btn-primary" href="{{ project.url }}" target="_blank">Visit it</a>
+            <a class="btn button-project" href="{{ project.url }}" target="_blank">Visit it</a>
         </div>
     </div>
 </div>
