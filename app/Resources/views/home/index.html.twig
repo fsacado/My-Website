@@ -1,12 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div data-section-name="identity" class="section" id="identity">
+    <div data-section-name="identity" class="sectionScroll" id="identity">
         {% include 'identity/index.html.twig' %}
     </div>
     {% for project in projects %}
-        <div data-section-name="project{{ project.id }}" class="section" id="project{{ project.id }}">
+        <div data-section-name="project{{ project.id }}" class="sectionScroll" id="project{{ project.id }}">
             {% include 'project/project.html.twig' %}
         </div>
     {% endfor %}
+    <div data-section-name="contact" class="sectionScroll" id="contact">
+        {% include 'contact/index.html.twig' %}
+    </div>
 {% endblock %}

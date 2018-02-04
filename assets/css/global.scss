@@ -1,24 +1,23 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
 /* GENERAL */
-
-$font-size-h1: calc(4vh + 5px);
-$font-size-h2: calc(3vh + 5px);
+$font-size-h1: calc(5vh + 5px);
+$font-size-h2: calc(4vh + 5px);
 $font-size-p: calc(2vh + 5px);
 $font-julius-sans-one: 'Julius Sans One', sans-serif;
 $font-lato: 'Lato', sans-serif;
-$color1 : #026670;
+$color1: #026670;
 $color2: #9FEDD7;
 $color3: #FEF9C7;
 $color4: #FCE181;
 $color5: #EDEAE5;
 
-h1, nav {
+h1 {
   font-family: $font-julius-sans-one;
   font-size: $font-size-h1;
   color: $color1;
 }
 
+label,
 p {
   font-family: $font-lato;
   font-size: $font-size-p;
@@ -46,17 +45,13 @@ h2 {
 .active {
   color: red;
 }
-
 /* IDENTITY ------------------------------------------------------------------------------------------------------------*/
-
 .identity-background {
-  //background: url(".web/images/winter-landscape-2571788_1920.jpg") center no-repeat;
-  //background-color: $color2;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  min-height: 100vh;
+
   .identity-section {
     h1 {
       margin-top: 12vh;
@@ -67,8 +62,10 @@ h2 {
         margin-top: 8vh;
       }
     }
+
     .presentation-image {
       min-height: 5vh;
+
       img {
         margin-top: calc(2vh + 2vw);
         margin-bottom: calc(1vh + 1vw);
@@ -76,8 +73,10 @@ h2 {
         width: 30vh;
       }
     }
+
     p {
       margin-top: calc(1vh + 2vw);
+
       a {
         img {
           max-height: 5vh;
@@ -86,34 +85,43 @@ h2 {
         }
       }
     }
+
     .identity-hr-navbar {
       margin-bottom: 70px;
+
       hr {
         border: solid 2px black;
       }
+
       button span {
         border: solid 1px black;
       }
+
       .navbar {
         height: 40px;
+
         .navbar-header {
           background-color: $color4;
         }
+
         .collapse {
-          //background-color: $color1;
           -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
           -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
           transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+
           .nav {
             float: none;
             display: inline-block;
+
             li {
               padding-left: 10px;
               padding-right: 10px;
+
               a {
-                color: $color4;
+                color: $color1;
                 font-size: calc(2vh + 3px);
               }
+
               a:hover {
                 color: black;
                 background-color: grey;
@@ -134,20 +142,21 @@ h2 {
     }
   }
 }
-
 /* PROJECTS ------------------------------------------------------------------------------------------------------------*/
-
 .project-background {
   background-color: $color1;
-  min-height: 100vh;
+
   .project-section {
     h1 {
       margin-top: 20vh;
     }
+
     .row {
       margin-top: 10vh;
+
       .image-div {
         overflow: hidden;
+
         .image {
           max-height: 38vh;
           max-width: 38vh;
@@ -158,22 +167,26 @@ h2 {
           }
         }
       }
+
       .image-div:hover .image {
         transform: scale(1.1);
         -moz-transform: scale(1.1);
         -webkit-transform: scale(1.1);
-
       }
+
       h2 {
         margin-bottom: 3vh;
         margin-top: 1vh;
       }
     }
+
     .modal {
       .modal-dialog {
         margin: 10vh auto;
+
         .modal-body {
           padding: 10px;
+
           img {
             max-height: inherit;
             width: 30vw;
@@ -181,19 +194,59 @@ h2 {
         }
       }
     }
+
     .div-button {
       margin-top: 5vh;
+
+      .button-project {
+        color: white;
+        font-size: $font-size-p;
+        font-family: $font-julius-sans-one;
+        border: solid 2px white;
+        border-radius: 1px;
+      }
+
+      .button-project:hover {
+        color: red;
+        border: solid 2px red;
+      }
     }
   }
-  .button-project {
-    color: white;
-    font-size: $font-size-p;
-    font-family: $font-julius-sans-one;
-    border: solid 2px white;
-    border-radius: 1px;
-  }
-  .button-project:hover {
-    color: red;
-    border: solid 2px red;
+}
+/* CONTACT -------------------------------------------------------------------------------------------------------------*/
+.contact-background {
+  background-color: $color2;
+
+  .contact-section {
+    h2 {
+      margin-top: 20vh;
+      font-family: $font-julius-sans-one;
+    }
+
+    form {
+      height: 50vh;
+      margin-top: 5vh;
+      text-align: center;
+      .label-form {
+        width: 100%;
+      }
+      .form-input {
+        width: 80%;
+        margin-bottom: 5vh;
+      }
+      .button-project {
+        color: white;
+        background-color: $color2;
+        font-size: $font-size-p;
+        font-family: $font-julius-sans-one;
+        border: solid 2px white;
+        border-radius: 1px;
+        margin-top: 6vh;
+      }
+      .button-project:hover {
+        color: red;
+        border: solid 2px red;
+      }
+    }
   }
 }
