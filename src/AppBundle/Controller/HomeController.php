@@ -2,15 +2,17 @@
 
 namespace AppBundle\Controller;
 
-use Symfony\Component\Form\FormTypeInterface;
-use AppBundle\Form\ContactType;
-use Doctrine\DBAL\Types\TextType;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 //use Service\Mailer;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\FormTypeInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class HomeController extends Controller
 {
@@ -24,22 +26,13 @@ class HomeController extends Controller
         $identity = $em->getRepository('AppBundle:Identity')->findOneById(1);
         $projects = $em->getRepository('AppBundle:Project')->findAll();
 
-
-        $defaultData = array('message' => 'Type your message here');
-
-        $form = $this->createFormBuilder($defaultData)
-            ->add('name', TextType::class)
-            ->add('email', EmailType::class)
-            ->add('question',TextType::class)
-            ->getForm();
-
+        $form = $this->formAction($request);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             // data is an array with "name", "email", and "message" keys
             $data = $form->getData();
         }
-
 
         return $this->render('home/index.html.twig', array(
             'identity' => $identity,
@@ -48,44 +41,46 @@ class HomeController extends Controller
         ));
     }
 
+    // Creating view for form
+    public function formAction(Request $request)
+    {
+        $defaultData = array('message' => 'Type your message here');
 
-//    public function formAction($name)
-//    {
-//        $message = \Swift_Message::newInstance()
-//            ->setSubject('Hello Email')
-//            ->setFrom('send@example.com')
-//            ->setTo('loann.meignant@hotmail.fr')
-//            ->setBody(
-//                $this->renderView(
-//                    'email/layout.html.twig',
-//                    array('name' => $name)
-//                ),
-//                'text/html'
-//            );
-//        $this->get('mailer')->send($message);
-//
-//        return $this->render('home/index.html.twig');
-//    }
+        $form = $this->createFormBuilder($defaultData)
+            ->add('name', TextType::class, array('attr' => array('class' => 'form-input'),
+            'label_attr' => array('class' => 'label-form' )), array('label' => 'Your name', 'constraints' => array(
+              new NotBlank(),
+            )))
+            ->add('email', EmailType::class, array('attr' => array('class' => 'form-input'),
+            'label_attr' => array('class' => 'label-form')), array('label' => 'Your email', 'constraints' => array(
+              new NotBlank(),
+              new Length(array('min' => 8)),
+            )))
+            ->add('question',TextareaType::class, array('attr' => array('class' => 'form-input'),
+            'label_attr' => array('class' => 'label-form')), array('label' => 'Your question', 'constraints' => array(
+              new NotBlank(),
+              new Length(array('min' => 20))
+            )))
+            ->getForm();
 
-//    public function contactAction(Request $request)
-//    {
-////        $defaultData = array('message' => 'Type your message please');
-////        $form = $this->createFormBuilder($defaultData)
-////            ->add('name', TextType::class, array('label' => 'Your name', 'attr' => array('class' => 'length')))
-////            ->add('email', EmailType::class, array('label' => 'Your email', 'attr' => array('class' => 'length')))
-////            ->add('message', TextType::class, array('required' => false, 'label' => 'Your message', 'attr' => array('class' => 'length')))
-////            ->add('send', SubmitType::class)
-////            ->getForm();
-////
-////        $form->handleRequest($request);
-////
-////        if ($form->isSubmitted() && $form->isValid()) {
-////            // data is an array with "name", "email", and "message" keys
-////            $data = $form->getData();
-////        }
-//
-//        return $this->render('contact/index.html.twig', [
-//           'form' => $form,
-//        ]);
-//    }
+            return $form;
+    }
+
+    //    public function formAction($name)
+    //    {
+    //        $message = \Swift_Message::newInstance()
+    //            ->setSubject('Hello Email')
+    //            ->setFrom('send@example.com')
+    //            ->setTo('loann.meignant@hotmail.fr')
+    //            ->setBody(
+    //                $this->renderView(
+    //                    'email/layout.html.twig',
+    //                    array('name' => $name)
+    //                ),
+    //                'text/html'
+    //            );
+    //        $this->get('mailer')->send($message);
+    //
+    //        return $this->render('home/index.html.twig');
+    //    }
 }

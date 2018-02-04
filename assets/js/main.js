@@ -2,7 +2,7 @@ require('bootstrap-sass');
 require('jquery-scrollify');
 let $ = require('jquery');
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
     if ("ontouchstart" in document.documentElement) {
         $.scrollify.disable();
@@ -13,7 +13,7 @@ $(document).ready(function () {
         $(function () {
             $('a').css("cursor", "pointer");
             $.scrollify({
-                section: ".section"
+                section: ".sectionScroll"
             });
             $('.home').click(function () {
                 $.scrollify.move("#identity");
@@ -40,4 +40,4 @@ $(document).ready(function () {
     navbarCollapse();
     $(window).scroll(navbarCollapse);
 
-});
+// });

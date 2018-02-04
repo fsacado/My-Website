@@ -1,33 +1,33 @@
 <div class="contact-background section">
-    <div class="contact-section container" id="contact">
-        <h2 class="center">Contact</h2>
+  <div class="contact-section container">
+    <h2 class="center">Contact</h2>
 
+    <form>
+      {{ form_start(form) }}
+      {{ form_widget(form) }}
+      <button type="submit" class="btn button-project">Submit</button>
+      {{ form_end(form) }}
+    </form>
+    {#<form action="" method="post" role="form">#}
 
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" class="btn btn-info edit-button" value="Confirmer"/>
-        {{ form_end(form) }}
+    {#<div class="form-group">#}
+    {#<div class="div-form">#}
+    {#<label for="">Your name</label>#}
+    {#<input type="text" class="form-control" name="name" id="name" placeholder="">#}
+    {#</div>#}
+    {#<div class="div-form">#}
+    {#<label for="">Your email</label>#}
+    {#<input type="email" class="form-control" name="email" id="email" placeholder="">#}
+    {#</div>#}
+    {#<div class="div-form">#}
+    {#<label for="">Your question</label>#}
+    {#<textarea class="form-control" name="question" id="question" placeholder=""></textarea>#}
+    {#</div>#}
+    {#</div>#}
 
-        {#<form action="" method="post" role="form">#}
-
-        {#<div class="form-group">#}
-        {#<div class="div-form">#}
-        {#<label for="">Your name</label>#}
-        {#<input type="text" class="form-control" name="name" id="name" placeholder="">#}
-        {#</div>#}
-        {#<div class="div-form">#}
-        {#<label for="">Your email</label>#}
-        {#<input type="email" class="form-control" name="email" id="email" placeholder="">#}
-        {#</div>#}
-        {#<div class="div-form">#}
-        {#<label for="">Your question</label>#}
-        {#<textarea class="form-control" name="question" id="question" placeholder=""></textarea>#}
-        {#</div>#}
-        {#</div>#}
-
-        {#<div class="center div-button">#}
-        {#<button type="submit" class="btn button-project">Submit</button>#}
-        {#</div>#}
-        {#</form>#}
-    </div>
+    {#<div class="center div-button">#}
+    {#<button type="submit" class="btn button-project">Submit</button>#}
+    {#</div>#}
+    {#</form>#}
+  </div>
 </div>
